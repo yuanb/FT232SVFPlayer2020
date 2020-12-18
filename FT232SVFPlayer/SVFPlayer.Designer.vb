@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class SVFPlayer
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.cmd_Find = New System.Windows.Forms.Button()
         Me.cmb_Interfaces = New System.Windows.Forms.ComboBox()
@@ -38,8 +38,11 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmd_FTSetup = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Dir1 = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'cmd_Find
@@ -173,14 +176,14 @@ Partial Class Form1
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "TDI"
         '
-        'Button1
+        'cmd_FTSetup
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 311)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(149, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Start BitBang Mode"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmd_FTSetup.Location = New System.Drawing.Point(12, 311)
+        Me.cmd_FTSetup.Name = "cmd_FTSetup"
+        Me.cmd_FTSetup.Size = New System.Drawing.Size(149, 23)
+        Me.cmd_FTSetup.TabIndex = 15
+        Me.cmd_FTSetup.Text = "Start BitBang Mode"
+        Me.cmd_FTSetup.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -191,13 +194,41 @@ Partial Class Form1
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "ISP Setup assuming SparkFun FT232RL"
         '
-        'Form1
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(270, 48)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(239, 23)
+        Me.TextBox1.TabIndex = 17
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(270, 16)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(111, 15)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "SVF file to program:"
+        '
+        'Dir1
+        '
+        Me.Dir1.FormattingEnabled = True
+        Me.Dir1.ItemHeight = 15
+        Me.Dir1.Location = New System.Drawing.Point(270, 103)
+        Me.Dir1.Name = "Dir1"
+        Me.Dir1.Size = New System.Drawing.Size(239, 169)
+        Me.Dir1.TabIndex = 19
+        '
+        'SVFPlayer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(907, 528)
+        Me.ClientSize = New System.Drawing.Size(1026, 610)
+        Me.Controls.Add(Me.Dir1)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cmd_FTSetup)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -213,7 +244,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmb_Interfaces)
         Me.Controls.Add(Me.cmd_Find)
-        Me.Name = "Form1"
+        Me.Name = "SVFPlayer"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -236,6 +267,9 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents cmd_FTSetup As Button
     Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Dir1 As ListBox
 End Class

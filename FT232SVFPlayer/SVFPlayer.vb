@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class SVFPlayer
     Public IsOpen As Boolean
     Public IsSetup As Boolean
     Public lHandle As Long
@@ -75,16 +75,8 @@
     End Sub
 
     Private Sub cmd_OpenInterface_Click(sender As Object, e As EventArgs) Handles cmd_OpenInterface.Click
-        Dim lNumDevs As Long
         Dim lResult As Long
         Dim sMyDescription As String
-
-        'OLD
-        '    'First check to see if we have any interfaces
-        '    If cmb_Interfaces.ListCount = 0 Then
-        '        MsgBox ("Find and choose interface first..")
-        '        Exit Sub
-        '    End If
 
         'First check to see if we have any interfaces
         If cmb_Interfaces.Items.Count = 0 Then Me.cmd_Find.PerformClick()
@@ -127,5 +119,20 @@
         openInterface.Checked = False
         IsOpen = False
         IsSetup = False
+    End Sub
+
+    Private Sub cmd_FTSetup_Click(sender As Object, e As EventArgs) Handles cmd_FTSetup.Click
+        Dir1.Items.Clear()
+
+        Dim fileNames = My.Computer.FileSystem.GetFiles(
+            "z:", FileIO.SearchOption.SearchTopLevelOnly, "*.svf")
+
+        For Each fileName As String In fileNames
+            Dir1.Items.Add(fileName)
+        Next
+    End Sub
+
+    Private Sub Dir1_Click(sender As Object, e As EventArgs) Handles Dir1.Click
+        TextBox1.Text = Dir1.SelectedItem
     End Sub
 End Class
