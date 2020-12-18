@@ -9,3 +9,6 @@ Programming language Visual Basic .NET
 
 [FT232 SVF Player C#](https://github.com/Scavanger/FT232-SVF-Player)  
 
+
+
+[JTAG On the Cheap with the FTDI FT232R](https://jacobncalvert.com/2020/02/04/jtag-on-the-cheap-with-the-ftdi-ft232r/)
